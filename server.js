@@ -21,9 +21,6 @@ app.use('/user' , require('./routes/userRouter'))
 
 
 
-
-
-
 // Connect to mongodb
 const URI = process.env.MONGODB_URL
 mongoose.connect(URI, {
@@ -44,15 +41,6 @@ if(process.env.NODE_ENV === 'production'){
         res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
     })
 }
-
-
-
-
-
-
-
-
-
 
 
 const PORT = process.env.PORT || 4000
